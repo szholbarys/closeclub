@@ -15,40 +15,37 @@
     box-sizing: border-box;
   }
   /* we change <div class = "head">  --->  header */
-  /* header{
+  header{
     width: 100%;
     height: 80px;
-    background-color: #F4F4F4;
+    background-color: #f4f4f4e2;
     position: fixed;
     top:0px;
     z-index: 2;
     font-size: 24px;
     padding-left: 80px;
     padding-top: 24px;
+    backdrop-filter: blur(10px);
+  }
+  header:hover{
+    background-color: rgb(0, 157, 255);
+    color:#F4F4F4;
   }
   .right{
-    margin-left: auto;
-  } */
-  .head{
-    background: #F4F4F4;
-    position: absolute;
-    width: 1470px;
-    height: 60px;
-    top:0px;
-  }
-   .right{
-    width: 200px;
-    height: 20px;
-    margin-left: 1275px;
-    margin-top: -19px;
+    margin-left: 950px;
+    font-size: 20px;
   }
   .left{
-    width: 200px;
-    height: 20px;
-    margin-left: 25px;
-    margin-top: 19px;
+    margin-left: -30px;
+    font-size: 20px;
   }
-  .zhabysqaq{
+
+  /* main{
+    margin-top: 80px;
+    padding:0px 80px;
+  } */
+ 
+  .contein{
     background: #F4F4F4;
     position: sticky;
     width: 900px;
@@ -56,17 +53,25 @@
     left: 478px;
     top:120px;
     border-radius: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
   }
-  .zhabysqaqtext{
+  .contein:hover{
+    background-color: rgb(0, 99, 211);
+    color: #DCDCDC;
+  }
+  .conteintext{
+    padding:20px;
     margin-left: 27px;
     margin-top: 7px;
     font-size: 22px;
   }
   .cards{
     width: 220px;
-    height: 1200px;
+    height: 950px;
     margin-left:100px;
     margin-top:-260px;
+    display: inline-block;
   }
   /* 1 */
   .card1{
@@ -119,20 +124,19 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 22px;
   }
-  /* zhabular */
+  /* close_button */
   .card3text{
     margin-top: 10px;
     margin-left: 10px;
     font-family: cursive;
   }
-  .zhabu{
+  .cards:last-child{
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .close_button{
     margin-left:140px;
   }
-  
-  .line{
-    width:100%;
-    height:1px;
-  } 
   
   .line{
     width:1000px;
@@ -165,6 +169,7 @@
 
   }
   button{
+    display: block;
     padding:15px;
     border:none;
     background-color:#3455FF;
@@ -176,8 +181,17 @@
     font-size: 20px;
     margin-left: 100px;
     margin-top: 30px;
-}
-.asty{
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: rgb(25, 0, 149);
+  }
+  button:focus{
+    background-color: rgb(133, 133, 133);
+    outline:3px;
+    color:black;
+  }
+footer{
   width: 1470px;
   height: 400px;
   margin-top: 50px;
@@ -197,39 +211,45 @@
   padding: 25px;
   margin-top: 250px;
   margin-left: 50px;
+  cursor: not-allowed;
+}
+.kicking:hover{
+    opacity: 0.5;
 }
 </style>
 
 <body>
     <!-- head -->   
     <!-- change to header -->
-    <div class="head">
+    <!-- <div class="head">
         <p class = "left">ВБК жаңалықтар порталы</p>
         <p class = "right">Тек шынайы ақпарат!</p>
-    </div>
-    <!-- <header>
-      <span class="right"></span>
-    </header> -->
+    </div> -->
+    <header>
+        <span class="left">ВБК жаңалықтар порталы</span>
+      <span class="right">Тек шынайы ақпарат!</span>
+    </header>
 
-    <!-- zhabysqaq -->
+    <!-- contein -->
+    <main>
     <div>
-    <div class="zhabysqaq">
-        <p class = "zhabysqaqtext">Жабысқақсың ғой короче</p>
+    <div class="contein">
+        <p class = "conteintext">Жабысқақсың ғой короче</p>
     </div>
     <!-- cards -->
   <div class="cards">
     <div class="card1">
-        <p class = "zhabu">жабу</p>
+        <p class = "close_button">жабу</p>
         <p class = "card1title">Карточка ғой короче</p><br>
         <p class = "card1text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea dictumst vestibulum </p><br>
     </div>
     <div class="card2">
-        <p class = "zhabu">жабу</p>
+        <p class = "close_button">жабу</p>
         <p class = "card2title">Екінші Карточка ғой короче</p><br>
         <p class = "card2text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea</p><br>
     </div>
     <div class="card3">
-        <p class = "zhabu">жабу</p>
+        <p class = "close_button">жабу</p>
         <p class = "card3title">Үшінші Карточка ғой короче</p><br>
         <p class = "card3text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitasse platea</p><br>
     </div>
@@ -248,13 +268,14 @@
   <div class="submit">
     <button type = "submit">Толығырақ</button>
   </div>
+</main>
   <!-- asty -->
-  <div class="asty">
+  <footer>
     <p class = "journalists">Борис Шевщенкі, Емельян Пугачев, Сергей лазарев<br>
       Арнайы ВБК тек шынайы жаңалықтар порталы үшін
     </p>
     <p class = "kicking">ухуххухуххухух</p>
-  </div>
+</footer>
 
 </body>
 </html>
